@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.chickenpro.app"
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.chickenpro.app"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
+}
